@@ -1,0 +1,29 @@
+﻿@model vendingMachine.Models.RegisterModel
+
+<form asp-action="Register" method="post" class="mt-4">
+    <div class="form-group">
+        <label asp-for="UserName" class="font-weight-bold">Username</label>
+        <input asp-for="UserName" class="form-control" />
+        <span asp-validation-for="UserName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email" class="font-weight-bold">Email</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Password" class="font-weight-bold">Password</label>
+        <input asp-for="Password" type="password" class="form-control" id="Password" name="Password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ConfirmPassword" class="font-weight-bold">Confirm Password</label>
+        <input asp-for="ConfirmPassword" type="password" class="form-control" id="ConfirmPassword" name="ConfirmPassword" />
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

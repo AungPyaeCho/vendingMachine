@@ -1,0 +1,45 @@
+﻿@model vendingMachine.Models.LoginModel
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title text-center">Login</h4>
+                    <hr />
+
+                    <form asp-action="Login" method="post">
+                        <div class="form-group">
+                            <label asp-for="UserName" class="font-weight-bold">Username</label>
+                            <input asp-for="UserName" id="UserName" name="UserName" class="form-control" />
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="PasswordHash" class="font-weight-bold">Password</label>
+                            <input asp-for="PasswordHash" type="password" id="PasswordHash" name="PasswordHash" class="form-control" />
+                            <span asp-validation-for="PasswordHash" class="text-danger"></span>
+                        </div>
+
+                        <!-- Uncomment this section if you want to add "Remember Me" functionality -->
+                        <!--
+                        <div class="form-check">
+                            <input asp-for="RememberMe" class="form-check-input" />
+                            <label class="form-check-label" asp-for="RememberMe">Remember Me</label>
+                        </div>
+                        -->
+
+                        <button type="submit" class="btn btn-primary btn-block mt-3">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

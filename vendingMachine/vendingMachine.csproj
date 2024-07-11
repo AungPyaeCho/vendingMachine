@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-vendingMachine-0e5b5b56-c015-48c9-a4a1-35b7ff0413f2</UserSecretsId>
+	  <AspNetCoreHostingModel>OutofProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
   <ItemGroup>

@@ -12,7 +12,7 @@ using vendingMachine.Data;
 namespace vendingMachine.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240711132632_vendingMachineDB")]
+    [Migration("20240711190859_vendingMachineDB")]
     partial class vendingMachineDB
     {
         /// <inheritdoc />
